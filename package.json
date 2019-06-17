@@ -49,7 +49,7 @@
               "entryPoints": [
                 {
                   "html": "./src/index.html",
-                  "js": "./src/renderer.js",
+                  "js": "./src/renderer.tsx",
                   "name": "main_window"
                 }
               ]
