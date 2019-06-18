@@ -8,18 +8,32 @@ class Menu extends PureComponent {
                 <div className="slimscroll-menu">
 
                     <a href="#" className="logo text-center mt-3">
-                       <h2>Logo</h2>
+                       <h2>Pusthaka</h2>
                     </a>
                     <ul className="metismenu side-nav mm-show mt-3">
 
-                        <li className="side-nav-title side-nav-item">Collections</li>
+                        <li className="side-nav-item">
+                            <a href="javascript: void(0);" className="side-nav-link">
+                                <i className="dripicons-time-reverse"/>
+                                <span> Recent</span>
+                            </a>
+                        </li>
+
+                        <li className="side-nav-title side-nav-item mt-2">Collections</li>
+
                         <li className="side-nav-item">
                             <a href="javascript: void(0);" className="side-nav-link">
                                 <span> Collection one </span>
                             </a>
                         </li>
 
-                        <li className="side-nav-title side-nav-item mt-1">Authors</li>
+                        <li className="side-nav-item">
+                            <a href="javascript: void(0);" className="side-nav-link">
+                                <span> Collection two </span>
+                            </a>
+                        </li>
+
+                        <li className="side-nav-title side-nav-item mt-4">Authors</li>
 
                         <li className="side-nav-item">
                             <a href="javascript: void(0);" className="side-nav-link">

@@ -1,10 +1,9 @@
 import React from 'react';
-import MainLayout from "../layouts/MainLayout";
 
 const DashboardWindow: any = () => (
     <div className="page-title-box">
 
-        <h4 className="page-title">My Collections</h4>
+        <h4 className="page-title">Recent list</h4>
 
         <div className="row justify-content-md-center">
             <div className="col-md-6">
