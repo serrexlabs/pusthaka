@@ -7,8 +7,8 @@ File: Icons Css File
 */
 @font-face {
   font-family: "dripicons-v2";
-  src: url("/assets/fonts/dripicons-v2.eot");
-  src: url("/assets/fonts/dripicons-v2.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/dripicons-v2.woff") format("woff"), url("/assets/fonts/dripicons-v2.ttf") format("truetype"), url("/assets/fonts/dripicons-v2.svg#dripicons-v2") format("svg");
+  src: url("../fonts/dripicons-v2.eot");
+  src: url("../fonts/dripicons-v2.eot?#iefix") format("embedded-opentype"), url("../fonts/dripicons-v2.woff") format("woff"), url("../fonts/dripicons-v2.ttf") format("truetype"), url("../fonts/dripicons-v2.svg#dripicons-v2") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -640,8 +640,8 @@ File: Icons Css File
 /* MaterialDesignIcons.com */
 @font-face {
   font-family: "Material Design Icons";
-  src: url("/assets/fonts/materialdesignicons-webfont.eot?v=3.2.89");
-  src: url("/assets/fonts/materialdesignicons-webfont.eot?#iefix&v=3.2.89") format("embedded-opentype"), url("/assets/fonts/materialdesignicons-webfont.woff2?v=3.2.89") format("woff2"), url("/assets/fonts/materialdesignicons-webfont.woff?v=3.2.89") format("woff"), url("/assets/fonts/materialdesignicons-webfont.ttf?v=3.2.89") format("truetype"), url("/assets/fonts/materialdesignicons-webfont.svg?v=3.2.89#materialdesigniconsregular") format("svg");
+  src: url("../fonts/materialdesignicons-webfont.eot?v=3.2.89");
+  src: url("../fonts/materialdesignicons-webfont.eot?#iefix&v=3.2.89") format("embedded-opentype"), url("../fonts/materialdesignicons-webfont.woff2?v=3.2.89") format("woff2"), url("../fonts/materialdesignicons-webfont.woff?v=3.2.89") format("woff"), url("../fonts/materialdesignicons-webfont.ttf?v=3.2.89") format("truetype"), url("../fonts/materialdesignicons-webfont.svg?v=3.2.89#materialdesigniconsregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 

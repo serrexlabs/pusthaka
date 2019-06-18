@@ -1,16 +1,13 @@
 import React, { PureComponent } from 'react';
-import './App.css';
-import './Icons.css';
 
 import MainLayout from "./layouts/MainLayout";
+import DashboardWindow from "./windows/DashboardWindow";
 
 class App extends PureComponent {
     render() {
         return (
            <MainLayout>
-               <h1>
-                   Hello I'm from react world!!!!!! yoo
-               </h1>
+               <DashboardWindow/>
            </MainLayout>
         );
     }

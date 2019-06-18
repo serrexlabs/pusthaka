@@ -12,7 +12,7 @@ module.exports = {
   plugins: assets.map(asset => {
     return new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, 'src', asset),
+        from: path.resolve(__dirname, 'src/public', asset),
         to: path.resolve(__dirname, '.webpack/renderer', asset)
       }
     ]);
