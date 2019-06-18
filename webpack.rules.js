@@ -29,7 +29,13 @@ module.exports = [
     test: /\.(css)$/,
     exclude: /(node_modules|.webpack)/,
     use: ['style-loader', 'css-loader']
+  },
+ {
+    test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+    exclude: /(node_modules|.webpack)/,
+    use: ['file-loader']
   }
+
   // Put your webpack loader rules in this array.  This is where you would put
   // your ts-loader configuration for instance:
   /**

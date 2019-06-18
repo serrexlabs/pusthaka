@@ -1,12 +1,15 @@
 import React, { PureComponent } from 'react';
-import MainLayout from "./layout/MainLayout";
+import './App.css';
+import './Icons.css';
+
+import MainLayout from "./layouts/MainLayout";
 
 class App extends PureComponent {
     render() {
         return (
            <MainLayout>
                <h1>
-                   Hello I'm from react world!!!!!!
+                   Hello I'm from react world!!!!!! yoo
                </h1>
            </MainLayout>
         );
