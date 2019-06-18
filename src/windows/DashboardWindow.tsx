@@ -22,6 +22,7 @@ const DashboardWindow: any = () => (
                                     Manage books
                                 </a>
                             </p>
+                            <img src="/assets/images/startman.svg" alt=""/>
 
                         </div>
 

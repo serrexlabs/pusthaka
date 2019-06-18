@@ -7,33 +7,15 @@ class Menu extends PureComponent {
             <div className="left-side-menu">
                 <div className="slimscroll-menu">
 
-                    <a href="#" className="logo text-center">
+                    <a href="#" className="logo text-center mt-3">
                        <h2>Logo</h2>
                     </a>
-
-                    <ul className="metismenu side-nav mm-show">
+                    <ul className="metismenu side-nav mm-show mt-3">
 
                         <li className="side-nav-title side-nav-item">Collections</li>
-
-                        <li className="side-nav-item mm-active">
-
-                            <ul className="side-nav-second-level mm-collapse mm-show" aria-expanded="false">
-                                <li className="mm-active">
-                                    <a href="#" className="active">Ecommerce</a>
-                                </li>
-                                <li>
-                                    <a href="#">CRM</a>
-                                </li>
-                                <li>
-                                    <a href="#">Projects</a>
-                                </li>
-                            </ul>
-                        </li>
-
                         <li className="side-nav-item">
                             <a href="javascript: void(0);" className="side-nav-link">
-                                <i className="dripicons-view-apps"/>
-                                <span> Apps </span>
+                                <span> Collection one </span>
                             </a>
                         </li>
 
