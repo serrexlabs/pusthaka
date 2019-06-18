@@ -16,11 +16,15 @@ const createWindow = () => {
     height: 600,
   });
 
+  mainWindow.setMenuBarVisibility(false);
+
   // and load the index.html of the app.
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
+if (process.env !== 'production')  {
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
+}
 
   // Emitted when the window is closed.
   mainWindow.on('closed', () => {

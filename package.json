@@ -81,6 +81,7 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.0.0",
     "electron": "5.0.4",
+    "electron-devtools-installer": "^2.2.4",
     "node-loader": "^0.6.0",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",

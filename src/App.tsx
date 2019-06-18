@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import MainLayout from "./layout/MainLayout";
 
-class App extends Component {
+class App extends PureComponent {
     render() {
         return (
            <MainLayout>

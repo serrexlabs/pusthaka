@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-const MainLayout = (props: {children: Component}) => (
+const MainLayout: any = (props: {children: Component }) => (
  <div className={'containerX'}>
      {props.children}
  </div>
