@@ -1,16 +1,19 @@
-import React, { PureComponent } from 'react';
+import React from "react";
+import Nav from './components/Nav';
+import Page from '@atlaskit/page';
+import { Link } from "@reach/router"
 
-import MainLayout from "./layouts/MainLayout";
-import DashboardWindow from "./windows/DashboardWindow";
+function App(props: any) {
+    return  (
+        <Page navigation={<Nav />}>
+            <nav>
+                <Link to="home">Home</Link>
+                <Link to="dashboard">Dashboard</Link>
+            </nav>
 
-class App extends PureComponent {
-    render() {
-        return (
-           <MainLayout>
-               <DashboardWindow/>
-           </MainLayout>
-        );
-    }
+            {props.children}
+        </Page>
+    );
 }
 
 export default App;

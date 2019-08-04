@@ -11,7 +11,8 @@ let mainWindow;
 
 const createWindow = () => {
   // Create the browser window.
-  mainWindow = new BrowserWindow({show: false});
+  mainWindow = new BrowserWindow({show: false,  webPreferences: {
+      nodeIntegration: true,}});
   mainWindow.maximize();
   mainWindow.show();
   mainWindow.setMenuBarVisibility(false);

@@ -60,11 +60,23 @@
     }
   },
   "dependencies": {
-    "@types/react": "^16.8.20",
-    "@types/react-dom": "^16.8.4",
+    "@atlaskit/avatar": "^16.0.8",
+    "@atlaskit/css-reset": "^5.0.5",
+    "@atlaskit/drawer": "^5.0.1",
+    "@atlaskit/global-navigation": "^7.3.7",
+    "@atlaskit/icon": "^19.0.1",
+    "@atlaskit/logo": "^12.1.4",
+    "@atlaskit/navigation-next": "^6.3.9",
+    "@atlaskit/page": "^11.0.5",
+    "@atlaskit/reduced-ui-pack": "^12.0.3",
+    "@atlaskit/theme": "^9.1.2",
+    "@reach/router": "^1.2.1",
+    "@types/reach__router": "^1.2.4",
     "electron-squirrel-startup": "^1.0.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-intl": "^2.9.0",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -77,6 +89,9 @@
     "@electron-forge/maker-zip": "6.0.0-beta.39",
     "@electron-forge/plugin-webpack": "6.0.0-beta.39",
     "@marshallofsound/webpack-asset-relocator-loader": "^0.5.0",
+    "@types/react": "^16.8.20",
+    "@types/react-dom": "^16.8.4",
+    "@types/styled-components": "^4.1.18",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.0.3",
