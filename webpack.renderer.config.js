@@ -4,7 +4,7 @@ const assets = [ 'assets/images', 'assets/css', 'assets/fonts' ]; // asset direc
 
 module.exports = {
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx", ".ttf", ".otf", ".eot", ".svg",'.woff']
+    extensions: [".ts", ".tsx", ".js", ".jsx",".ttf", ".otf", ".eot", ".svg",'.woff']
   },
   module: {
     rules: require('./webpack.rules'),
