@@ -12,6 +12,7 @@ import {useState} from "react";
 
 const { dialog } = require('electron').remote;
 
+// @TODO move into separate component
 const DrawerContent = ({
                            drawerTitle,
                            drawerBody,
@@ -27,6 +28,8 @@ const DrawerContent = ({
 
     </div>
 );
+
+// @TODO move into separate component
 
 const Global = () => {
     const [isCreateDrawer, openCreateDrawer] = useState(false);
