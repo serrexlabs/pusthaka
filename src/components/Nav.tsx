@@ -21,13 +21,15 @@ const DrawerContent = ({
 }) => (
     <div>
         <h1>{drawerTitle}</h1>
-        <div>{drawerBody}</div>
+        <button> Upload book</button>
+
+        <button> Create collection</button>
 
     </div>
 );
 
 const Global = () => {
-    const [isCreateDrawer, openCreateDrawer] = useState(true);
+    const [isCreateDrawer, openCreateDrawer] = useState(false);
 
     const renderDrawer = () => (
         <DrawerContent
@@ -46,17 +48,15 @@ const Global = () => {
                         { name: 'Books', extensions: ['pdf'] },
                     ]})*/
                // openCreateDrawer(true);
+                openCreateDrawer(true)
             }}
-
-            onSearchClick={() => openCreateDrawer(true)}
-            searchTooltip="Search (\)"
-            isSearchDrawerOpen={isCreateDrawer}
-            searchDrawerContents={renderDrawer}
-            onSearchDrawerClose={() => openCreateDrawer(false)}
-            onSearchDrawerCloseComplete={()=> console.log("closed")}
+            isCreateDrawerOpen={isCreateDrawer}
+            createDrawerContents={renderDrawer}
+            onCreateDrawerClose={() => openCreateDrawer(false)}
+            onCreateDrawerCloseComplete={()=> console.log("closed")}
 
 
-
+            onSearchClick={() => console.log("search")}
             onSettingsClick={() => console.log('settings clicked')}
             loginHref="#login"
         />
