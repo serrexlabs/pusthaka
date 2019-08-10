@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from './components/Nav';
+import { Nav } from "./components/navigation";
 import Page from '@atlaskit/page';
 import { Link } from "@reach/router"
 
