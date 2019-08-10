@@ -12,7 +12,8 @@
     "lint": "eslint src/**/*.{ts,tsx}",
     "test": "jest --config jest.config.js",
     "tsc": "tsc",
-    "cs": "prettier --check src/**/*.{scss,tsx,ts}"
+    "cs": "prettier --check src/**/*.{scss,tsx,ts}",
+    "analyze": "tsc && yarn cs && yarn lint && yarn test"
   },
   "keywords": [],
   "author": "sanath",

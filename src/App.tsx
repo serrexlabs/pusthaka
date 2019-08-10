@@ -1,6 +1,6 @@
 import React from "react";
 import Page from "@atlaskit/page";
-import { Link, Router } from "@reach/router";
+import { Link } from "@reach/router";
 import { Nav } from "./components/navigation";
 
 function App(props: any): JSX.Element {
