@@ -21,7 +21,7 @@ module.exports = [
     use: 'babel-loader'
   },
   {
-    test: /\.(tsx)$/,
+    test: /.(tsx|ts)$/,
     exclude: /(node_modules|.webpack)/,
     loaders: ['awesome-typescript-loader']
   },
