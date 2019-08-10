@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GlobalNavigation from "@atlaskit/global-navigation";
 import EmojiAtlassianIcon from "@atlaskit/icon/glyph/emoji/objects";
-import CreateDrawerContent from "./CreateDrawerContent";
+import CreateDrawerContent from "./create-drawer-content";
 
 const Global = () => {
   const [isCreateDrawer, openCreateDrawer] = useState(false);

@@ -7,4 +7,7 @@ before_install:
   - npm install typescript -g
 
 script:
+  - yarn cs
   - yarn lint
+  - yarn tsc
+  - yarn test

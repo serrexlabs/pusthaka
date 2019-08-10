@@ -1,6 +1,8 @@
 import React from "react";
+import RouterProps from "../types/router-props";
 
-function CollectionPage(): JSX.Element {
+// eslint-disable-next-line no-unused-vars
+function CollectionPage(props: RouterProps): JSX.Element {
   return <h1>CollectionPage</h1>;
 }
 
