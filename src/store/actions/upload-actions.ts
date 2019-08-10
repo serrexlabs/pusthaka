@@ -1,4 +1,4 @@
-import Action from "../types/Action";
+import Action from "../types/action";
 
 const PREFIX = "@@upload/";
 export const OPEN_FILE_WINDOW = `${PREFIX}OPEN_FILE_WINDOW`;

@@ -1,7 +1,7 @@
 import React from "react";
 import { LayoutManager, NavigationProvider, ThemeProvider } from "@atlaskit/navigation-next";
 import { navTheme } from "../../theme";
-import Global from "./GlobalNavigation";
+import Global from "./global-navigation";
 
 // @TODO move into separate component
 

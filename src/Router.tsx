@@ -1,8 +1,8 @@
 import React from "react";
 import { Router, createMemorySource, createHistory, LocationProvider } from "@reach/router";
 import App from "./App";
-import HomePage from "./pages/HomePage";
-import CollectionPage from "./pages/CollectionPage";
+import HomePage from "./pages/home-page";
+import CollectionPage from "./pages/collection-page";
 
 const source = createMemorySource("home");
 const history = createHistory(source);

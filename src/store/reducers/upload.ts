@@ -1,5 +1,5 @@
-import Action from "../types/Action";
-import * as UploadActions from "../actions/uploadActions";
+import Action from "../types/action";
+import * as UploadActions from "../actions/upload-actions";
 
 interface UploadState {
   isFileWindowOpen: boolean;
