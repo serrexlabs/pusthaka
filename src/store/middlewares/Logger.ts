@@ -1,10 +1,14 @@
 const logger = (store: any) => (next: any) => (action: any) => {
-    console.group(action.type);
-    console.info('dispatching', action);
-    let result = next(action);
-    console.log('next state', store.getState());
-    console.groupEnd();
-    return result
+  // eslint-disable-next-line no-console
+  console.group(action.type);
+  // eslint-disable-next-line no-console
+  console.info("dispatching", action);
+  const result = next(action);
+  // eslint-disable-next-line no-console
+  console.log("next state", store.getState());
+  // eslint-disable-next-line no-console
+  console.groupEnd();
+  return result;
 };
 
-export default logger
+export default logger;

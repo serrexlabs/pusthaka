@@ -1,25 +1,26 @@
 import Action from "../types/Action";
-import * as UploadActions from "../actions/uploadActions"
+import * as UploadActions from "../actions/uploadActions";
 
 interface UploadState {
-    isFileWindowOpen: boolean,
+  isFileWindowOpen: boolean;
 }
 
 const initialState: UploadState = {
-    isFileWindowOpen: false
+  isFileWindowOpen: false,
 };
 
 function openFileWindow(state: UploadState) {
-    return {
-        ...state, isFileWindowOpen: true
-    }
+  return {
+    ...state,
+    isFileWindowOpen: true,
+  };
 }
 
-export default (state = initialState , action: Action) => {
-    switch (action.type) {
-        case UploadActions.OPEN_FILE_WINDOW:
-            return openFileWindow(state);
-        default:
-            return state
-    }
-}
+export default (state = initialState, action: Action) => {
+  switch (action.type) {
+    case UploadActions.OPEN_FILE_WINDOW:
+      return openFileWindow(state);
+    default:
+      return state;
+  }
+};
