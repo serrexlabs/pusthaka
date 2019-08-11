@@ -7,3 +7,4 @@ declare module "@atlaskit/navigation-next";
 declare module "@atlaskit/reduced-ui-pack";
 declare module "@atlaskit/global-navigation";
 declare module "@atlaskit/page";
+declare module "pdfjs-dist/build/pdf";

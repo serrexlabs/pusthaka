@@ -36,6 +36,8 @@ module.exports = {
         "@typescript-eslint/explicit-function-return-type": "off",
         "react/jsx-filename-extension": [1, { extensions: [".tsx"] }],
         "react/prefer-stateless-function": 0,
+/*        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",*/
         "import/prefer-default-export": 0,
         "@typescript-eslint/interface-name-prefix": 0,
         "import/no-extraneous-dependencies": ["error", { devDependencies: true }],
