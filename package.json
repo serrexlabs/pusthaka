@@ -11,9 +11,9 @@
     "publish": "electron-forge publish",
     "lint": "eslint src/**/*.{ts,tsx}",
     "test": "jest --config jest.config.js",
-    "tsc": "tsc",
+    "tsc": "tsc --noEmit",
     "cs": "prettier --check src/**/*.{scss,tsx,ts}",
-    "analyze": "tsc && yarn cs && yarn lint && yarn test"
+    "analyze": "dot-only-hunter src && tsc --noEmit && yarn cs && yarn lint && yarn test"
   },
   "keywords": [],
   "author": "sanath",
@@ -116,6 +116,7 @@
     "chai-jest-snapshot": "^2.0.0",
     "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^3.0.0",
+    "dot-only-hunter": "^1.0.3",
     "electron": "5.0.4",
     "electron-devtools-installer": "^2.2.4",
     "enzyme": "^3.10.0",

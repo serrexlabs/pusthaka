@@ -4022,6 +4022,11 @@ domutils@^1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
+dot-only-hunter@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/dot-only-hunter/-/dot-only-hunter-1.0.3.tgz#f64d21edbe6ff3114995f1061a61a935c300204b"
+  integrity sha1-9k0h7b5v8xFJlfEGGmGpNcMAIEs=
+
 duplexify@^3.4.2, duplexify@^3.6.0:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/duplexify/-/duplexify-3.7.1.tgz#2a4df5317f6ccfd91f86d6fd25d8d8a103b88309"
