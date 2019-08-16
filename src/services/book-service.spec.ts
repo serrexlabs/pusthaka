@@ -8,7 +8,7 @@ describe("BookService", (): void => {
 
   beforeEach(() => {
     service = new BookService();
-    sandbox.useFakeTimers(new Date(2019, 8, 15, 10));
+    sandbox.useFakeTimers(new Date(2019, 8, 15, 10, 1, 2, 2));
   });
 
   afterEach((): void => {
