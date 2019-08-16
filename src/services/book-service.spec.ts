@@ -18,6 +18,6 @@ describe("BookService", (): void => {
   it("will generate unique and universal id for give details", (): void => {
     const id = service.generateId("author", "title");
 
-    expect(id).to.equal("16d332f4940.5e992120eb81ad9144ea0493ea34cfba8447140d");
+    expect(id).to.equal("16d33303b72.5e992120eb81ad9144ea0493ea34cfba8447140d");
   });
 });
