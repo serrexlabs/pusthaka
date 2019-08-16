@@ -2,6 +2,7 @@ import * as fs from "fs-extra";
 import { getDocument } from "pdfjs-dist";
 import BookService from "./book-service";
 import ConfigService from "./config-service";
+import db from "../config/db";
 
 interface UploadedFileWithId {
   [name: string]: string;
@@ -31,8 +32,17 @@ export default class UploadService {
   public async upload(paths: Array<string>): Promise<boolean> {
     const userDataUri = this.configService.getUserDataPath();
     this.initDirectories(userDataUri);
+
+    console.log(db);
+
+    db.books.find({ title: "abc" }, {}, (err: any, docs: any) => console.log(docs));
+
+    db.books.insert({ title: "abc", author: "cba" }, (err: Error, doc: any) => {
+      console.log(doc);
+    });
+
     // const uploadedFiles = await this.fileUploadSync(paths);
-    await Promise.all(
+    /* await Promise.all(
       paths.map(async (path: string) => {
         const data = await fs.readFile(path);
         const book: any = await getDocument(data);
@@ -43,7 +53,7 @@ export default class UploadService {
         await this.bookService.addBookInfo(bookId, info.author, info.title);
         fs.copySync(path, `${userDataUri}/books/${bookId}.pdf`);
       }),
-    );
+    ); */
 
     return true;
   }
