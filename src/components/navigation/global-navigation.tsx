@@ -4,17 +4,17 @@ import EmojiAtlassianIcon from "@atlaskit/icon/glyph/emoji/objects";
 import CreateDrawerContent from "./create-drawer-content";
 
 const Global = () => {
-  const [isCreateDrawer, openCreateDrawer] = useState(false);
+  const [isCreateDrawer, setIsCreateDrawer] = useState(false);
 
   return (
     <GlobalNavigation
       productIcon={EmojiAtlassianIcon}
       productHref="#"
       onProductClick={() => null}
-      onCreateClick={() => openCreateDrawer(true)}
+      onCreateClick={() => setIsCreateDrawer(true)}
       isCreateDrawerOpen={isCreateDrawer}
       createDrawerContents={() => <CreateDrawerContent />}
-      onCreateDrawerClose={() => openCreateDrawer(false)}
+      onCreateDrawerClose={() => setIsCreateDrawer(false)}
       onCreateDrawerCloseComplete={() => null}
       onSearchClick={() => null}
       onSettingsClick={() => null}
