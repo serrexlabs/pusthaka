@@ -1,6 +1,5 @@
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const assets = ["assets/js" /* 'assets/css', 'assets/fonts' */]; // asset directories
 
 module.exports = {
   resolve: {
@@ -9,12 +8,12 @@ module.exports = {
   module: {
     rules: require("./webpack.rules"),
   },
-  plugins: assets.map((asset) => {
-    return new CopyWebpackPlugin([
+  plugins: [
+    new CopyWebpackPlugin([
       {
-        from: path.resolve(__dirname, "src/public", asset),
-        to: path.resolve(__dirname, ".webpack/renderer/main_window", asset),
+        from: path.resolve(__dirname, "src/public/assets/js/pdf.worker.js"),
+        to: path.resolve(__dirname, ".webpack/renderer/main_window/index.worker.js"),
       },
-    ]);
-  }),
+    ]),
+  ],
 };

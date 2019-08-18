@@ -1,4 +1,5 @@
 import sha1 from "sha1";
+import db from "../core/db";
 
 export default class BookService {
   public generateId(author: string, title: string) {
@@ -9,6 +10,26 @@ export default class BookService {
     return `${createdAtHash}.${idHash}`;
   }
 
-  // eslint-disable-next-line no-unused-vars
-  public addBookInfo(id: string, author: string, title: string): void {}
+  public async saveBookInfo(
+    bookId: string,
+    author: string,
+    title: string,
+    path: string,
+  ): Promise<any> {
+    const authorId = this.findAuthorId(author);
+    await db.books.insert({ bookId, authorId, authorName: author, title, path });
+  }
+
+  private async findAuthorId(name: string): Promise<string> {
+    let [author] = await db.authors.find({ name });
+
+    if (author) {
+      // eslint-disable-next-line no-underscore-dangle
+      return author._id;
+    }
+
+    author = await db.authors.insert({ name });
+    // eslint-disable-next-line no-underscore-dangle
+    return author._id;
+  }
 }
