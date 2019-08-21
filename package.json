@@ -87,8 +87,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-intl": "^2.9.0",
-    "react-redux": "^7.1.0",
-    "redux": "^4.0.4",
     "sha1": "^1.1.1",
     "styled-components": "^4.3.2"
   },
