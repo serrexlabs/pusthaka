@@ -4,18 +4,18 @@ import BookService from "./book-service";
 import ConfigService from "./config-service";
 
 export default (serviceManager: ServiceManagerInterface) => {
-  serviceManager.register(BookService.name, () => {
+  serviceManager.register("BookService", () => {
     return new BookService();
   });
 
-  serviceManager.register(ConfigService.name, () => {
+  serviceManager.register("ConfigService", () => {
     return new ConfigService();
   });
 
-  serviceManager.register(UploadService.name, () => {
+  serviceManager.register("UploadService", () => {
     return new UploadService(
-      serviceManager.get(BookService.name),
-      serviceManager.get(ConfigService.name),
+      serviceManager.get("BookService"),
+      serviceManager.get("ConfigService"),
     );
   });
 };

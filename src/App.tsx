@@ -3,6 +3,7 @@ import Page from "@atlaskit/page";
 import { Link } from "@reach/router";
 import { Nav } from "./components/navigation";
 import UploadModel from "./components/upload/upload-model";
+import "./App.scss";
 
 function App(props: any): JSX.Element {
   return (

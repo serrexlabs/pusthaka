@@ -1,37 +1,28 @@
 import React from "react";
 import { expect } from "chai";
-import { mount } from "enzyme";
-import configureMockStore from "redux-mock-store";
-import { Provider } from "react-redux";
+import { shallow } from "enzyme";
 import sinon from "sinon";
 import CreateDrawerContent from "./create-drawer-content";
-import * as UploadActions from "../../store/actions/upload-actions";
-
-const mockStore = configureMockStore();
+import { event } from "../../core/event";
 
 describe("<CreateDrawerContent />", (): void => {
   const sandbox = sinon.createSandbox();
   let component: any;
-  let openWindowStub: any;
 
   beforeEach(() => {
-    // NOTE: doing mount cause unwanted rendering, the recommended way is shallow rendering
-    component = mount(
-      <Provider store={mockStore()}>
-        <CreateDrawerContent />
-      </Provider>,
-    );
-    openWindowStub = sandbox.stub(UploadActions, "openWindow").returns({
-      type: "OPEN_WINDOW_MOCK_TYPE",
-    });
+    sandbox.stub(event, "dispatch");
+    component = shallow(<CreateDrawerContent />);
   });
 
   afterEach((): void => {
     sandbox.restore();
   });
 
-  it("will dispatch an open window action", (): void => {
+  it("will dispatch a OPEN_FILE_WINDOW_REQUESTED even", (): void => {
     component.find("#upload-book-button").simulate("click");
-    expect(openWindowStub.callCount).to.equal(1);
+    // @ts-ignore
+    expect(event.dispatch.callCount).to.equal(1);
+    // @ts-ignore
+    expect(event.dispatch.firstCall.args).to.deep.equal(["@@upload/OPEN_FILE_WINDOW_REQUESTED"]);
   });
 });
