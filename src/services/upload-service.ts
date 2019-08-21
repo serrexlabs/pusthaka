@@ -35,9 +35,10 @@ export default class UploadService {
     const bookIds = await Promise.all(
       paths.map(
         async (path: string): Promise<string> => {
+          const filename = this.extractTitleFromPath(path);
           const data = await fs.readFile(path);
           const book: any = await getDocument(data);
-          const info: BookInfo = await this.getBookAuthorAndTitle(book);
+          const info: BookInfo = await this.getBookAuthorAndTitle(book, filename);
           const bookId: string = this.bookService.generateId(info.author, info.title);
           const bookPath = `${userDataUri}/books/${bookId}.pdf`;
 
@@ -51,6 +52,17 @@ export default class UploadService {
     );
 
     return bookIds;
+  }
+
+  private extractTitleFromPath(path: string) {
+    const filename = path
+      .replace(/^.*[\\/]/, "")
+      .split(".")
+      .slice(0, -1)
+      .join(".")
+      .replace(/[^0-9a-z]/gi, " ");
+
+    return filename.charAt(0).toUpperCase() + filename.slice(1);
   }
 
   /**
@@ -78,13 +90,13 @@ export default class UploadService {
     canvas.remove();
   }
 
-  private async getBookAuthorAndTitle(book: any): Promise<BookInfo> {
+  private async getBookAuthorAndTitle(book: any, filename: string): Promise<BookInfo> {
     const { info, metadata } = await book.getMetadata();
 
     // eslint-disable-next-line no-underscore-dangle
     const author = info.Author || (metadata ? metadata._metadata["dc:creator"] : "N/A");
     // eslint-disable-next-line no-underscore-dangle
-    const title = info.Title || (metadata ? metadata._metadata["dc:title"] : "N/A");
+    const title = info.Title || (metadata ? metadata._metadata["dc:title"] : filename);
 
     return { author, title };
   }

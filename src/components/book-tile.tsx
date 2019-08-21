@@ -6,9 +6,9 @@ interface Props {
   title: string;
   author?: string;
   path?: string;
-  /* thumbnail: string; */
 }
 
+// @TODO move this into a separate component or separate place where we can reuse.
 function imagePath(id: string) {
   return `file://${userDataPath}/thumbs/${id}.jpeg`;
 }

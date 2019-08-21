@@ -16,6 +16,10 @@ function HomePage(props: RouterProps): JSX.Element {
   useEffect(() => {
     getBooks();
     event.subscribe(NEW_BOOKS_HAS_ADDED, getBooks);
+
+    return () => {
+      event.unsubscribe(NEW_BOOKS_HAS_ADDED);
+    };
   }, []);
   return (
     <div className="container">
