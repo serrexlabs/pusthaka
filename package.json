@@ -1,6 +1,6 @@
 {
-  "name": "pusthaka",
-  "productName": "pusthaka",
+  "name": "Pusthaka",
+  "productName": "Pusthaka",
   "version": "1.0.0",
   "description": "A ebook reader - 'Your favorite books need a dedicated place' ",
   "main": ".webpack/main",
@@ -84,11 +84,11 @@
     "fs-extra": "^8.1.0",
     "nedb-promises": "^4.0.0",
     "pdfjs-dist": "^2.1.266",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
     "react-intl": "^2.9.0",
     "sha1": "^1.1.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
