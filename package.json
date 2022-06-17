@@ -124,7 +124,7 @@
     "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^3.0.0",
     "dot-only-hunter": "^1.0.3",
-    "electron": "5.0.4",
+    "electron": "15.5.5",
     "electron-devtools-installer": "^2.2.4",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
